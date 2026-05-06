@@ -5,6 +5,14 @@ and a naive exploration phase + DA on estimated preferences (not the full paper 
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# 允许在 bandit_matching/ 目录下直接 `python toy_run.py`（把项目根加入 path）
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
 import numpy as np
 
 from bandit_matching.deferred_acceptance import gale_shapley_agent_optimal, prefs_from_utility_rows

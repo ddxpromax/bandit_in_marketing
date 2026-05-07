@@ -19,8 +19,6 @@
 
 ```bash
 cd bandit_in_marketing
-python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python -m bandit_matching.toy_run
 ```
